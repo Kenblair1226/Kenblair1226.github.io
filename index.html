@@ -1,12 +1,15 @@
 <body>
   <h1>Hello world</h1>
 
-  <p id="p1"></p>
-  
-  <p id="p2"></p>
+  <ul id="list"></ul>
 
   <script>
-    document.getElementById("p1").innerHTML = requset.queryString("easemobId");
-    document.getElementById("p2").innerHTML = requset.queryString("nickname");
+    const list = document.getElementById('list');
+    const params = new URLSearchParams(window.location.search);
+    for (const [key, value] of params) {
+      const entry = document.createElement('li');
+      entry.innerHTML = `${key} = ${value}`;
+      list.appendChild(entry);
+    }
   </script>
 </body>
