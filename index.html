@@ -1,12 +1,12 @@
 <body>
   <h1>Hello world</h1>
 
-  <p id="p1">request</p>
+  <p id="p1"></p>
   
   <p id="p2"></p>
 
   <script>
-    document.getElementById("p1").innerHTML = Request;
-    document.getElementById("p2").innerHTML = window.location.href;;
+    document.getElementById("p1").innerHTML = requset.queryString("easemobId");
+    document.getElementById("p2").innerHTML = requset.queryString("nickname");
   </script>
 </body>
